@@ -18,6 +18,8 @@ Diskordle implements this gameplay with a twist: Players join a lobby with their
 Think of it sort of like secret santa but with words - You submit a word that someone else will guess, and receive a word yourself that someone
 else submitted. Don't worry, you'll never have to guess your own word (unless you and another person think _very_ alike)
 
+Check out the video demo [here](https://youtu.be/7OeIY9VDUSg)
+
 ## Gameplay Instructions 
 
 Once the bot has been successfully installed in your server (see installation guide) (or you have joined a server that has the bot ready),
