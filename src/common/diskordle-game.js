@@ -31,6 +31,9 @@ module.exports = class DiskordleGame {
      * Void method that performs necessary game setup
      */
     async setupGame() {
+
+        // Replace the lobby with a proper message
+        await this._generateInProgressMessage()
         // Create a private thread for each player. This is where they will interact with the game
         for (const player of this.players) {
             await this._registerPlayerThread(player)
@@ -38,8 +41,7 @@ module.exports = class DiskordleGame {
         }
         // As a part of ensuring all players get a unique word. See getStartingPlayerWord for more detail
         shuffle(this.players)
-        // Replace the lobby with a proper message
-        await this._generateInProgressMessage()
+
 
         LobbyRegistry.delete(this.lobbyInteraction.id)
         GameRegistry.set(this.lobbyInteraction.id, this)
